@@ -1,1 +1,7 @@
-<h1>I will add a new category!</h1>
+<section class="formSectionContainer">
+<%= form_with model:@group do |form|%>
+<%= form.text_field :name, placeholder:"Category"%>
+<%= form.text_field :icon, placeholder:"Category Icon's link"%>
+<%= form.submit "Create" %>
+<%end%>
+</section>

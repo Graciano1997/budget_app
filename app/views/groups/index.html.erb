@@ -1,7 +1,8 @@
+<section class="categoriesContainer">
+<div class="categories">
+
 <% if @categories %>
-
 <% if @categories.size>0 %>
-
 <% @categories.each do |category|%>
 <%=render partial:"groups/category", locals:{category_item:category}%>
 <% end%>
@@ -12,3 +13,12 @@
 <% else %>
 <p>Ups! There is an Issue</p>
 <% end %>
+
+</div>
+
+<div class="newCategoryContainer">
+<%= link_to  new_group_path do %>
+<%=button_to "New Category"%>
+<%end%>
+</div>
+</section>

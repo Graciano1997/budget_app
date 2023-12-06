@@ -1,0 +1,12 @@
+<%= form_with model:[@group,@operation] do |form|%>
+<%= form.text_field :name, placeholder:"name"%>
+<%= form.number_field :amount, placeholder:"amount", step:"any"%>
+ <% @categories.each do |category| %>
+    <div class="form-check">
+      <%= form.check_box :category_ids, { multiple: true, checked:category.id.eql?(@group.id) },category.id,nil %>
+      <label for=<%="operation_category_ids_#{category.id}"%>><%=category.name%></label>
+    </div>
+  <% end %>
+<%= form.submit%>
+<%end%>
+

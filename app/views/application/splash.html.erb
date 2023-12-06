@@ -1,0 +1,9 @@
+<div>
+Your Budge App
+<% if current_user%>
+<h1>Ja estas Logado!</h1>
+<% else %>
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign Up", new_user_registration_path %>
+<%end%>
+</div>

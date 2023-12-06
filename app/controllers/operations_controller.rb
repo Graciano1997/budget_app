@@ -10,9 +10,29 @@ class OperationsController < ApplicationController
     end
 
     def create
-
+       @operation=Operation.new(operation_params)
+       @operation.author=current_user
+       if @operation.save
+        @groups=Group.find(params[:operation][:category_ids])
+        @groups.each do |group_item|
+          @group_operation=GroupOperation.new
+          @group_operation.operation=@operation
+          @group_operation.group=group_item
+          @group_operation.save
+        end
+      redirect_to group_operations_path(group_id:params[:group_id])
+        # end
+      #  else
+       end
+      # puts "Aqui #{params[:operation][:category_ids]}"
     end
 
     def show
+    end
+
+    private 
+    
+    def operation_params
+      params.require(:operation).permit(:name,:amount,:category_ids)
     end
 end

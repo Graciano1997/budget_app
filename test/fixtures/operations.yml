@@ -4,10 +4,10 @@ one:
   author: one
   author_type: Author
   name: MyString
-  amout: 9.99
+  amount: 9.99
 
 two:
   author: two
   author_type: Author
   name: MyString
-  amout: 9.99
+  amount: 9.99

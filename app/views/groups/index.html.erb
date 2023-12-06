@@ -1,0 +1,14 @@
+<% if @categories %>
+
+<% if @categories.size>0 %>
+
+<% @categories.each do |category|%>
+<%=render partial:"groups/category", locals:{category_item:category}%>
+<% end%>
+
+<% else %>
+<p>There is no Categories Yet Please ensure<%= link_to "to add it",new_group_path %> </p>
+<% end %>
+<% else %>
+<p>Ups! There is an Issue</p>
+<% end %>

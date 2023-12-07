@@ -1,28 +1,35 @@
 <section class="operationsContainer">
+<header class="screenHeaderMenu">
+<%= link_to root_path do%>
+<i class="fa-solid fa-arrow-left"></i>
+<%end%>
+<h4><%="OPERATIONS"%></h4>
+<i class="fa-solid fa-magnifying-glass"></i>
+</header>
+
 <div class="operations">
-
 <% if @group_operations %>
-
 <% if @group_operations.size>0 %>
+
+<div class="operationsTotalContainer">
+<h4>Total</h4>
+<h4>$<%=@total%></h4>
+</div>
 
 <% @group_operations.each do |group_operation_item|%>
 <%=render partial:"operations/operation", locals:{operation_item:group_operation_item}%>
 <% end%>
 <% else %>
 <p>There is no group_operations Yet Please ensure </p>
-<%
-=begin%>
- <%= link_to "to add it",new_group_path %>  
-<%
-=end%>
 <% end %>
 <% else %>
 <p>Ups! There is an Issue</p>
 <% end %>
 </div>
+
 <div class="newOperationContainer">
 <%= link_to  new_group_operation_path(group_id:@group_operations[0].group_id) do %>
-<%=button_to "New Operation"%>
+<%=button_to "ADD NEW OPERATION"%>
 <%end%>
 </div>
 </section>

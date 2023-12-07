@@ -23,6 +23,7 @@
 
  body {
     background-color:whitesmoke;
+    color: var(--text-color)
  }
  body,
  .loginContainer,
@@ -32,7 +33,7 @@
     flex-direction: column;
  }
 
- .splashContainer {
+ .splashContainer{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -40,6 +41,14 @@
     align-items: center;
     height:100%;
     width: 100%;
+ }
+
+ .operationsContainer {
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    /* height:100%;
+    width: 100%; */
  }
 
  .splashLinksContainer{
@@ -68,7 +77,8 @@
      color:var(--text-color);
     }
 
- .screenHeader {
+ .screenHeader,
+ .screenHeaderMenu {
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -76,9 +86,16 @@
      color:var(--white);
      margin-bottom: 0.5rem;
      padding: 0 0.3rem 0 0.3rem;
+    }
+
+    .screenHeaderMenu {
+        padding: 0rem 1rem 0rem 1rem;
+        margin-bottom: 0;
+        height: 4rem;
  }
 
- .screenHeader a {
+ .screenHeader a,
+ .screenHeaderMenu a {
     color: var(--white);
  }
 
@@ -109,4 +126,59 @@
     padding-right: 0;
     padding-left:0 ;
     cursor: pointer;
+}
+
+.operationsTotalContainer {
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.operationItem {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    margin: 0.5rem;
+    height:5rem ;   
+}
+
+.operationItemDescription {
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.5rem 0 0.5rem;
+    margin-top: 1.5rem;
+}
+.operationItemAmount {
+    display: flex;
+    justify-content: flex-start;
+    padding-left:0.5rem;
+    margin-top:0.8rem;
+}
+
+.newOperationContainer{
+    margin-top:0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    padding: 0.5rem;
+}
+
+.newOperationContainer button,
+#btnSubmitAdd {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--second-color);
+    outline-color: transparent;
+    border:1px solid var(--white);
+    color: var(--white);
+}
+
+.formCheckContainer {
+    background-color: var(--white);
+    padding:0.5rem 0  0 0.5rem;
+}
+
+.form-check {
+    margin: 1rem 0 1rem 0;
 }

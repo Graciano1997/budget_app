@@ -108,4 +108,5 @@
     color:var(--white);
     padding-right: 0;
     padding-left:0 ;
+    cursor: pointer;
 }

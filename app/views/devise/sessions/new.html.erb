@@ -2,18 +2,12 @@
 
 <div class="screenBody">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class:"formContainer") do |f| %>
-<header class="screenHeader">
-<%= link_to root_path do%>
-<i class="fa-solid fa-arrow-left"></i>
-<%end%>
-<h4>LOGIN</h4>
-<%= f.submit "Log in", id:'btnSubmit' %>
-</header>
+<%= render partial:"application/header", locals:{description:"LOGIN",btn_description:"Log in",f:f}%>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email" %>
     <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password" %>
 <% end %>
 <div class="passwordForgotContainer">
-<%= link_to "Forgot password ?",new_user_password_path, class:""%>
+<%= link_to "Forgot password ?",new_user_password_path%>
 </div>
 <div>
 </section>

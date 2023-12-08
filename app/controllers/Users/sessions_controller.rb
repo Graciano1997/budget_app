@@ -16,10 +16,15 @@ class Users::SessionsController < Devise::SessionsController
    end
 
   # DELETE /resource/sign_out
-  #  def destroy
-  #    super
-  #  end
-  
+    # def destroy
+    #   super
+    # end
+  # In your controller action, e.g., SessionsController#destroy
+def destroy
+  sign_out(current_user) # This method is provided by Devise
+  redirect_to root_path, notice: "Logged out successfully."
+end
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.

@@ -20,7 +20,7 @@
 <%=render partial:"operations/operation", locals:{operation_item:group_operation_item}%>
 <% end%>
 <% else %>
-<p>There is no group_operations Yet Please ensure </p>
+<p>There is no operations! Please add it! </p>
 <% end %>
 <% else %>
 <p>Ups! There is an Issue</p>
@@ -28,7 +28,7 @@
 </div>
 
 <div class="newOperationContainer">
-<%= link_to  new_group_operation_path(group_id:@group_operations[0].group_id) do %>
+<%= link_to  new_group_operation_path(group_id:params[:group_id]) do %>
 <%=button_to "ADD NEW OPERATION"%>
 <%end%>
 </div>

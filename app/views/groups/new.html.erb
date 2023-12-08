@@ -1,7 +1,20 @@
 <section class="formSectionContainer">
-<%= form_with model:@group do |form|%>
-<%= form.text_field :name, placeholder:"Category"%>
-<%= form.text_field :icon, placeholder:"Category Icon's link"%>
-<%= form.submit "Create" %>
+<header class="screenHeaderMenu">
+<%= link_to root_path do%>
+<i class="fa-solid fa-arrow-left"></i>
 <%end%>
+<h4><%="NEW CATEGORY"%></h4>
+<i class="fa-solid fa-magnifying-glass"></i>
+</header>
+<section class="loginContainer">
+  <div class="screenBody">
+<%= form_with model:@group do |form|%>
+<%= form.text_field :name, placeholder:"Category", required:true %>
+<%= form.text_field :icon, placeholder:"Category Icon", required:true %>
+    <div class="newOperationContainer">
+<%= form.submit "NEW GROUP", id:'btnSubmitAdd'%>
+</div>
+<%end%>
+</div>
+</section>
 </section>

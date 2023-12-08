@@ -1,4 +1,5 @@
 @import url('root.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -19,6 +20,9 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+
  }
 
  body {
@@ -43,12 +47,15 @@
     width: 100%;
  }
 
- .operationsContainer {
-    /* position: fixed; */
+ .operationsContainer,
+ .categories {
     display: flex;
     flex-direction: column;
-    /* height:100%;
-    width: 100%; */
+    color: var(--text-color);
+}
+
+.categories a  {
+     color: var(--text-color);
  }
 
  .splashLinksContainer{
@@ -143,7 +150,7 @@
     height:5rem ;   
 }
 
-.operationItemDescription {
+.operationItemDescription{
     display: flex;
     justify-content: space-between;
     padding:0 0.5rem 0 0.5rem;
@@ -164,14 +171,20 @@
     padding: 0.5rem;
 }
 
+.newCategoryContainer {
+    margin-top: 1rem;
+}
+
 .newOperationContainer button,
-#btnSubmitAdd {
+#btnSubmitAdd,
+.newCategoryContainer button {
     width: 100%;
     padding: 1rem;
     background-color: var(--second-color);
     outline-color: transparent;
     border:1px solid var(--white);
     color: var(--white);
+    cursor: pointer;
 }
 
 .formCheckContainer {
@@ -181,4 +194,60 @@
 
 .form-check {
     margin: 1rem 0 1rem 0;
+}
+
+.categoryItem {
+    margin: 0.5rem 0.5rem 0.2rem 0.5rem;
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+    align-items: center;
+    background-color: var(--white);
+    height: 4rem;
+    cursor: pointer;
+}
+
+.categoryItemIcon {
+    padding-left: 0.5rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.newCategoryContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    padding: 0.5rem;
+}
+
+.categoryItemDescription{
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.5rem 0 0.5rem;
+}
+
+.hide {
+    display:none;
+}
+
+.mainMenu {
+    position: fixed;
+    background-color: var(--main-color);
+    top: 0;
+    width: 100%;
+    height: 99.5%;
+    color: var(--white);
+}
+
+.mainMenu a {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#close {
+    padding: 1rem;
 }

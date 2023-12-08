@@ -1,6 +1,12 @@
 class GroupsController < ApplicationController
     def index
+        @total_categories=[]
         @categories=current_user.groups
+        @categories.each do |category|
+            total_category=Operation.where(author:current_user).joins(:group_operations).where(group_operations:{group_id:category.id}).sum(:amount)
+            @total_categories.push({:category_id=>category.id,:total=>total_category})
+        end
+        @total_categories
     end
 
     def new

@@ -1,4 +1,5 @@
 class OperationsController < ApplicationController
+  load_and_authorize_resource
     def index
       @group_operations=current_user.groups.where(id:params[:group_id]).first.group_operations.where(group_id:params[:group_id]).order(created_at: :desc)
       @total=Operation.where(author:current_user).joins(:group_operations).where(group_operations:{group_id:params[:group_id]}).sum(:amount)

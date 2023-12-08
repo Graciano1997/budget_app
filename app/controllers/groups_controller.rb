@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+    load_and_authorize_resource
     def index
         @total_categories=[]
         @categories=current_user.groups

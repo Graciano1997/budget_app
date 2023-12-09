@@ -1,5 +1,6 @@
 @import url('root.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,238 +17,229 @@
  *= require_self
  */
 
- * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    /* font-family: 'Lato', sans-serif; */
-    font-family: 'Montserrat', sans-serif;
-
- }
-
- body {
-    background-color:whitesmoke;
-    color: var(--text-color)
- }
- body,
- .loginContainer,
- .screenBody,
- .formContainer {
-    display: flex;
-    flex-direction: column;
- }
-
- .splashContainer{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    width: 100%;
- }
-
- .operationsContainer,
- .categories {
-    display: flex;
-    flex-direction: column;
-    color: var(--text-color);
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.categories a  {
-     color: var(--text-color);
- }
-
- .splashLinksContainer{
-    position: fixed;
-    bottom: 3%;
-    width: 100%;
- }
-.splashLinks{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    padding: 0 1rem 0 1rem;
+body {
+  background-color: whitesmoke;
+  color: var(--text-color);
 }
- .splashLinks button{
-    border: transparent;
-    width: 100%;
-    padding: 0.8rem;
-    background-color:var(--main-color);
-    color:var(--white);
+
+body,
+.loginContainer,
+.screenBody,
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.splashContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.operationsContainer,
+.categories {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.categories a {
+  color: var(--text-color);
+}
+
+.splashLinksContainer {
+  position: fixed;
+  bottom: 3%;
+  width: 100%;
+}
+
+.splashLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.splashLinks button {
+  border: transparent;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--main-color);
+  color: var(--white);
 }
 
 .splashLinks a {
-    text-align: center;
-    padding-top: 0.5rem;
-     color:var(--text-color);
-    }
+  text-align: center;
+  padding-top: 0.5rem;
+  color: var(--text-color);
+}
 
- .screenHeader,
- .screenHeaderMenu {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     background-color:var(--main-color);
-     color:var(--white);
-     margin-bottom: 0.5rem;
-     padding: 0 0.3rem 0 0.3rem;
-    }
+.screenHeader,
+.screenHeaderMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  padding: 0 0.3rem 0 0.3rem;
+}
 
-    .screenHeaderMenu {
-        padding: 0rem 1rem 0rem 1rem;
-        margin-bottom: 0;
-        height: 4rem;
- }
+.screenHeaderMenu {
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 0;
+  height: 4rem;
+}
 
- .screenHeader a,
- .screenHeaderMenu a {
-    color: var(--white);
- }
+.screenHeader a,
+.screenHeaderMenu a {
+  color: var(--white);
+}
 
- .screenBody form {
-     display: flex;
-     flex-direction: column;
-     gap: 5px;
-    }
+.screenBody form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .screenBody form input {
-    padding: 0.8rem;
-    background-color: var(--white);
-    border: transparent;
+  padding: 0.8rem;
+  background-color: var(--white);
+  border: transparent;
 }
 
 .passwordForgotContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
 }
 
 .passwordForgotContainer a {
-    color:var(--text-color);   
+  color: var(--text-color);
 }
 
 #btnSubmit {
-    background-color:var(--main-color);
-    color:var(--white);
-    padding-right: 0;
-    padding-left:0 ;
-    cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--white);
+  padding-right: 0;
+  padding-left: 0;
+  cursor: pointer;
 }
 
 .operationsTotalContainer {
-    display:flex;
-    justify-content: space-between;
-    background-color: var(--white);
-    padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .operationItem {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    margin: 0.5rem;
-    height:5rem ;   
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  margin: 0.5rem;
+  height: 5rem;
 }
 
-.operationItemDescription{
-    display: flex;
-    justify-content: space-between;
-    padding:0 0.5rem 0 0.5rem;
-    margin-top: 1.5rem;
+.operationItemDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
+  margin-top: 1.5rem;
 }
+
 .operationItemAmount {
-    display: flex;
-    justify-content: flex-start;
-    padding-left:0.5rem;
-    margin-top:0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+  margin-top: 0.8rem;
 }
 
-.newOperationContainer{
-    margin-top:0.5rem;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--second-color);
-    padding: 0.5rem;
+.newOperationContainer {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--second-color);
+  padding: 0.5rem;
 }
 
 .newCategoryContainer {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .newOperationContainer button,
 #btnSubmitAdd,
 .newCategoryContainer button {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--second-color);
-    outline-color: transparent;
-    border:1px solid var(--white);
-    color: var(--white);
-    cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--second-color);
+  outline-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
 }
 
 .formCheckContainer {
-    background-color: var(--white);
-    padding:0.5rem 0  0 0.5rem;
+  background-color: var(--white);
+  padding: 0.5rem 0  0 0.5rem;
 }
 
 .form-check {
-    margin: 1rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .categoryItem {
-    margin: 0.5rem 0.5rem 0.2rem 0.5rem;
-    display: grid;
-    grid-template-columns: 15fr 85fr;
-    align-items: center;
-    background-color: var(--white);
-    height: 4rem;
-    cursor: pointer;
+  margin: 0.5rem 0.5rem 0.2rem 0.5rem;
+  display: grid;
+  grid-template-columns: 15fr 85fr;
+  align-items: center;
+  background-color: var(--white);
+  height: 4rem;
+  cursor: pointer;
 }
 
 .categoryItemIcon {
-    padding-left: 0.5rem;
+  padding-left: 0.5rem;
 }
 
-button{
-    cursor: pointer;
-}
-
-
-.newCategoryContainer{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--second-color);
-    padding: 0.5rem;
-}
-
-.categoryItemDescription{
-    display: flex;
-    justify-content: space-between;
-    padding:0 0.5rem 0 0.5rem;
+.categoryItemDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 .hide {
-    display:none;
+  display: none;
 }
 
 .mainMenu {
-    position: fixed;
-    background-color: var(--main-color);
-    top: 0;
-    width: 100%;
-    height: 99.5%;
-    color: var(--white);
+  position: fixed;
+  background-color: var(--main-color);
+  top: 0;
+  width: 100%;
+  height: 99.5%;
+  color: var(--white);
 }
 
 .mainMenu a {
-    padding: 1rem;
-    margin-top: 1rem;
-    font-weight: 700;
-    color: var(--white);
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--white);
 }
 
 #close {
-    padding: 1rem;
+  padding: 1rem;
 }

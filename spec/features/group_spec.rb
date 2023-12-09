@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'Group/Category', type: :feature do
   before :each do
     User.create(name: 'gra', email: 'gra@gmail.com', password: 'gragra')
@@ -13,7 +12,7 @@ RSpec.describe 'Group/Category', type: :feature do
       end
     end
   end
-
+  
   context 'the Splash screen' do
     it 'Should contain the success sms after log in' do
       expect(page).to have_content 'successfully'

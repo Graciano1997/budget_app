@@ -58,13 +58,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Project Live]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎬  VIdeo Walkthrough <a name="live-demo"></a>
 
-- [Video Demo Link]()
+- [Video Demo Link](https://drive.google.com/file/d/1acKjktYgsB5aZ7pay-lcFge9LjV6as34/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

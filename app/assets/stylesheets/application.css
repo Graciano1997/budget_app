@@ -167,12 +167,16 @@ body,
   margin-top: 0.8rem;
 }
 
-.newOperationContainer {
+.newOperationContainer,
+.newCategoryContainer {
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   background-color: var(--second-color);
   padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .newCategoryContainer {

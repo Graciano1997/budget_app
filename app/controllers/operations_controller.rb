@@ -4,13 +4,7 @@ class OperationsController < ApplicationController
     @group_operations = current_user.groups.where(id: params[:group_id]).first.group_operations.where(group_id: params[:group_id]).order(created_at: :desc)
     @total = Operation.where(author: current_user).joins(:group_operations).where(group_operations: { group_id: params[:group_id] }).sum(:amount)
   end
-
-  def new
-    @group = Group.find(params[:group_id])
-    @operation = Operation.new
-    @categories = current_user.groups
-  end
-
+  
   def create
     @operation = Operation.new(operation_params)
     @operation.author = current_user
@@ -28,7 +22,10 @@ class OperationsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @group_operations = current_user.groups.where(id: params[:id]).first.group_operations.where(group_id: params[:id]).order(created_at: :desc)
+    @total = Operation.where(author: current_user).joins(:group_operations).where(group_operations: { group_id: params[:id] }).sum(:amount)
+  end
 
   private
 

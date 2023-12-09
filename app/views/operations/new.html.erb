@@ -9,9 +9,9 @@
 
 <section class="loginContainer">
   <div class="screenBody">
-<%= form_with model:[@group,@operation] do |form|%>
-<%= form.text_field :name, placeholder:"name", required:true%>
-<%= form.number_field :amount, placeholder:"amount", step:"any", min:0,required:true%>
+<%= form_with model:[@group,@operation],class:"formOperation" do |form|%>
+<%= form.text_field :name, placeholder:"name", required:true, id:"operationName"%>
+<%= form.number_field :amount, placeholder:"amount", step:"any", min:0,required:true, id:"operationAmount"%>
 <div class="formCheckContainer">
  <% @categories.each do |category| %>
     <div class="form-check">

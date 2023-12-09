@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
     has_many :operations, as: :author
     has_many :groups
+    validates_presence_of :name,:email,:password
+    
 end

@@ -1,0 +1,18 @@
+current directory: C:/Users/GRA/Desktop/MICROVERSE/ModuleV/budget_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.0/ext/nio4r
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+
+current directory: C:/Users/GRA/Desktop/MICROVERSE/ModuleV/budget_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.0/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231208-5088-mntppn sitelibdir\=./.gem.20231208-5088-mntppn clean
+make: *** Sem regra para fazer o alvo "clean".  Parar.
+
+current directory: C:/Users/GRA/Desktop/MICROVERSE/ModuleV/budget_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.0/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231208-5088-mntppn sitelibdir\=./.gem.20231208-5088-mntppn
+make: Nada a fazer para "all".
+
+current directory: C:/Users/GRA/Desktop/MICROVERSE/ModuleV/budget_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.0/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231208-5088-mntppn sitelibdir\=./.gem.20231208-5088-mntppn install
+make: Nada a fazer para "install".
+
+current directory: C:/Users/GRA/Desktop/MICROVERSE/ModuleV/budget_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.0/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231208-5088-mntppn sitelibdir\=./.gem.20231208-5088-mntppn clean
+make: *** Sem regra para fazer o alvo "clean".  Parar.

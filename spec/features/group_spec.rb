@@ -12,7 +12,7 @@ RSpec.describe 'Group/Category', type: :feature do
       end
     end
   end
-  
+
   context 'the Splash screen' do
     it 'Should contain the success sms after log in' do
       expect(page).to have_content 'successfully'

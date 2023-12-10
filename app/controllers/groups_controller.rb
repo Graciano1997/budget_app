@@ -24,10 +24,6 @@ class GroupsController < ApplicationController
     end
   end
 
-  def show; end
-
-  def destroy; end
-
   private
 
   def group_params

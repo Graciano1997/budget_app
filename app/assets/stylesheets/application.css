@@ -203,6 +203,7 @@ body,
 .form-check {
   margin-top: 0.4rem;
   height: 8rem;
+  padding: 0.4rem 0 0.4rem 0;
   overflow-y: scroll;
 }
 

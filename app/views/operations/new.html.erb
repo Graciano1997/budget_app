@@ -13,12 +13,12 @@
 <%= form.text_field :name, placeholder:"name", required:true, id:"operationName"%>
 <%= form.number_field :amount, placeholder:"amount", step:"any", min:0,required:true, id:"operationAmount"%>
 <div class="formCheckContainer">
- <% @categories.each do |category| %>
     <div class="form-check">
+ <% @categories.each do |category| %>
       <%= form.check_box :category_ids, { multiple: true,required:category.id.eql?(@group.id),checked:category.id.eql?(@group.id) },category.id,nil %>
       <label for=<%="operation_category_ids_#{category.id}"%>><%=category.name%></label>
-    </div>
   <% end %>
+    </div>
   </div>
   <div class="newOperationContainer">
 <%= form.submit "ADD OPERATION", id:'btnSubmitAdd'%>

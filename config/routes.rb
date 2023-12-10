@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # get "/groups/:id/operations/show"
-  get '/groups/:id/operations', to: 'operations#show'
   resources :groups do
     resources :operations
   end

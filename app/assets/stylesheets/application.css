@@ -250,6 +250,6 @@ body,
 }
 
 .itemsContainer {
-  height: 5rem;
+  height: 20rem;
   overflow-y: scroll;
 }

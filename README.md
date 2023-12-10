@@ -64,7 +64,7 @@
 
 ## 🎬  VIdeo Walkthrough <a name="live-demo"></a>
 
-- [Video Demo Link](https://drive.google.com/file/d/1acKjktYgsB5aZ7pay-lcFge9LjV6as34/view?usp=sharing)
+- [Video Demo Link](https://drive.google.com/file/d/1mqe8DXbCy63-5Zdf8fNuUpz25f9o_gH0/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

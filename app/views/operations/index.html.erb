@@ -16,9 +16,11 @@
 <h4>$<%=@total%></h4>
 </div>
 
+<div class="itemsContainer">
 <% @group_operations.each do |group_operation_item|%>
 <%=render partial:"operations/operation", locals:{operation_item:group_operation_item}%>
 <% end%>
+</div>
 <% else %>
 <p>There is no operations! Please add it! </p>
 <% end %>

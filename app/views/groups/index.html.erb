@@ -11,9 +11,11 @@
 <div class="categories">
 <% if @categories %>
 <% if @categories.size>0 %>
+<div class="itemsContainer">
 <% @categories.each_with_index do |category,index|%>
 <%=render partial:"groups/category", locals:{category_item:category,total_category:@total_categories[index]}%>
 <% end%>
+</div>
 <% else %>
 <p>There is no Categories! Please <%= link_to "add it",new_group_path %> </p>
 <% end %>

@@ -248,3 +248,8 @@ body,
 #close {
   padding: 1rem;
 }
+
+.itemsContainer {
+  height: 5rem;
+  overflow-y: scroll;
+}

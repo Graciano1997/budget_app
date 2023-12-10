@@ -1,0 +1,32 @@
+<%= render partial:"groups/menu" %>
+
+<section class="categoriesContainer">
+<header class="screenHeaderMenu">
+<i class="fa-solid fa-bars" id="hamburguer"></i>
+<h4><%="CATEGORIES"%></h4>
+<i class="fa-solid fa-magnifying-glass"></i>
+</header>
+
+<div class="categories">
+<% if @categories %>
+<% if @categories.size>0 %>
+<div class="itemsContainer">
+<% @categories.each_with_index do |category,index|%>
+<%=render partial:"groups/category", locals:{category_item:category,total_category:@total_categories[index]}%>
+<% end%>
+</div>
+<% else %>
+<p>There is no Categories! Please <%= link_to "add it",new_group_path %> </p>
+<% end %>
+<% else %>
+<p>Ups! There is an Issue</p>
+<% end %>
+</div>
+
+<div class="newCategoryContainer">
+<%= link_to  new_group_path do %>
+<%=button_to "NEW CATEGORY"%>
+<%end%>
+</div>
+
+<%= render partial:"groups/script" %>

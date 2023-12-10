@@ -1,0 +1,29 @@
+<section class="operationsContainer">
+<header class="screenHeaderMenu">
+<%= link_to group_operations_path(group_id:@group.id) do%>
+<i class="fa-solid fa-arrow-left"></i>
+<%end%>
+<h4><%="NEW OPERATION"%></h4>
+<i class="fa-solid fa-magnifying-glass"></i>
+</header>
+
+<section class="loginContainer">
+  <div class="screenBody">
+<%= form_with model:[@group,@operation],class:"formOperation" do |form|%>
+<%= form.text_field :name, placeholder:"name", required:true, id:"operationName"%>
+<%= form.number_field :amount, placeholder:"amount", step:"any", min:0,required:true, id:"operationAmount"%>
+<div class="formCheckContainer">
+ <% @categories.each do |category| %>
+    <div class="form-check">
+      <%= form.check_box :category_ids, { multiple: true,required:category.id.eql?(@group.id),checked:category.id.eql?(@group.id) },category.id,nil %>
+      <label for=<%="operation_category_ids_#{category.id}"%>><%=category.name%></label>
+    </div>
+  <% end %>
+  </div>
+  <div class="newOperationContainer">
+<%= form.submit "ADD OPERATION", id:'btnSubmitAdd'%>
+</div>
+<%end%>
+</div>
+</section>
+</section>

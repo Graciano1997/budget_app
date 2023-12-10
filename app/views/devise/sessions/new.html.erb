@@ -1,0 +1,13 @@
+<section class="loginContainer">
+
+<div class="screenBody">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name),html: { class: "formItem" }) do |f| %>
+<%= render partial:"application/header", locals:{description:"LOGIN",btn_description:"Log in",f:f}%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", id:"emai", required:true %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password",id:"pass", required:true %>
+<% end %>
+<div class="passwordForgotContainer">
+<%= link_to "Forgot password ?",new_user_password_path%>
+</div>
+<div>
+</section>

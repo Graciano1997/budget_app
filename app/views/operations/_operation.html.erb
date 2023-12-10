@@ -1,0 +1,11 @@
+<div class="operationItem">
+
+<div class="operationItemDescription">
+<p><%=operation_item.operation.name%></p>
+<h4>$<%=operation_item.operation.amount%></h4>
+</div>
+
+<div class="operationItemAmount">
+<p><%=DateTime.parse(operation_item.operation.created_at.to_s).strftime("%d %b %Y") %></p>
+</div> 
+</div>

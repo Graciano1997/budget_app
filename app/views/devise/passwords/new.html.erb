@@ -1,0 +1,10 @@
+<section class="loginContainer">
+<div class="screenBody">
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= render partial:"application/header", locals:{description:"RECOVER PASSWORD",btn_description:"Send",f:f}%>
+  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Your Email", required:true %>
+<% end %>
+</div>
+</section>
+

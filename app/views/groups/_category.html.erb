@@ -1,0 +1,11 @@
+<%= link_to group_operations_path(category_item) do %>
+<div class="categoryItem">
+<div class="categoryItemIcon">
+<p><%=category_item.icon %></p>
+</div>
+<div class="categoryItemDescription">
+<p><%=category_item.name%></p>
+<h4>$<%=total_category[:total]%></h4>
+</div>
+</div>
+<%end%>

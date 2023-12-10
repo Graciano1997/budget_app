@@ -1,0 +1,16 @@
+<section class="splashContainer">
+<h2>Your Budge App</h2>
+<% if current_user%>
+<h1>Ja estas Logado!</h1>
+<% else %>
+<div class="splashLinksContainer">
+<div class="splashLinks">
+<%= link_to new_user_session_path do %>
+<%= button_to "LOG IN", class:"btnLogin"%>
+<%end%>
+
+<%= link_to "SIGN UP",new_user_registration_path%>
+</div>
+</div>
+<%end%>
+</section>

@@ -253,3 +253,8 @@ body,
   height: 23rem;
   overflow-y: scroll;
 }
+
+.form-check {
+  height: 8rem;
+  overflow-y: scroll;
+}

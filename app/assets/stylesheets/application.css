@@ -201,9 +201,11 @@ body,
 }
 
 .form-check {
+  display: flex;
+  flex-direction: column;
   margin-top: 0.4rem;
-  height: 8rem;
-  padding: 0.4rem 0 0.4rem 0;
+  height: 10rem;
+  gap:10px;
   overflow-y: scroll;
 }
 
